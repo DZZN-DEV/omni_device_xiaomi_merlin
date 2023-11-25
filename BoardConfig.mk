@@ -52,6 +52,8 @@ BOARD_AVB_RECOVERY_ADD_HASH_FOOTER_ARGS += \
     --prop com.android.build.boot.os_version:$(PLATFORM_VERSION) \
     --prop com.android.build.boot.security_patch:$(PLATFORM_SECURITY_PATCH)
 
+PB_DISABLE_DEFAULT_DM_VERITY := true
+
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
