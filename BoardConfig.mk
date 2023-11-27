@@ -108,6 +108,84 @@ TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_INCLUDE_FBE_METADATA_DECRYPT := true
 
+################### ############################################
+# MANDATORY FLAGS # These flags HAVE TO be set/changed by you! #
+################### ############################################
+
+# Device codename
+# Default (if not set): N/A
+SHRP_DEVICE_CODE := merlin
+
+# Path of your SHRP device tree
+# Replace <device-brand> with the device brand name
+# (SHRP_DEVICE_CODE will expand to the above variable so check if that is correct)
+SHRP_PATH := device/xiaomi/$(SHRP_DEVICE_CODE)
+
+# Maintainer name
+# Default (if not set): N/A
+SHRP_MAINTAINER := DZZN-DEV
+
+# Recovery Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_REC_TYPE := Treble
+
+# Device Type (for "About" section only)
+# Default (if not set): N/A
+SHRP_DEVICE_TYPE := A/B
+
+# Your device's recovery path, dont use blindly
+# Default (if not set): N/A
+SHRP_REC := /dev/block/bootdevice/by-name/recovery
+
+# Use this flag only if SHRP_REC is set
+# Default (if not set): N/A
+SHRP_HAS_RECOVERY_PARTITION := true
+
+# Use this flag only if your device is A/B or Virtual A/B.
+# Default (if not set): N/A
+SHRP_AB := true
+
+################### ################################################################################
+# IMPORTANT FLAGS # These are usually good to check - at least if the defaults are what you expect #
+################### ################################################################################
+
+# Emergency DownLoad mode (0 = no EDL mode, 1 = EDL mode available)
+# Default (if not set): 0
+SHRP_EDL_MODE := 0
+
+# Internal storage path
+# Default (if not set): /sdcard
+SHRP_INTERNAL := /sdcard
+
+# External SDcard path
+# Default (if not set): /
+SHRP_EXTERNAL := /external_sd
+
+# USB OTG path
+# Default (if not set): /
+SHRP_OTG := /usb_otg
+
+# Flashlight: (0 = disable, 1 = enable)
+# Default (if not set): 0
+SHRP_FLASH := 1
+
+# For notch devices
+# Default (if not set): N/A
+SHRP_NOTCH := true
+
+# SHRP Express, enables on-the-fly theme patching (also persistent) + persistent lock
+# Default (if not set): N/A
+SHRP_EXPRESS := true
+
+# SHRP Express use Data save shrp files inside /data instead of /system
+# Note - SHRP_EXPRESS must be true to use this flag otherwise it won't work.
+# Default (if not set) will use /system if SHRP_EXPRESS true otherwise will use legacy method of patching
+SHRP_EXPRESS_USE_DATA := true
+
+# SHRP Dark mode, use this flag to have dark theme set by default
+# Default (if not set) is not using DARK mode
+SHRP_DARK := true
+
 # TWRP Configuration
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
