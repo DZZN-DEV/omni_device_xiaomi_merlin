@@ -1,0 +1,8 @@
+[
+  {
+    "remote":      "github",
+    "repository":  "DZZN-DEV/android_device_xiaomi_mt6768-common",
+    "target_path": "device/xiaomi/mt6767-common",
+    "revision":    "android-10.0"
+  }
+]
